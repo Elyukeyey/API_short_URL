@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="URL shortner microservice">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>URL shortner</h1>
+    </header>
+    <main>
+      <section id="API">
+        <h2>API:</h2>
+        <div class="shorten-form">
+          <h4>
+          Shorten URL  
+          </h4>
+          <form method="POST" action="api/shorturl/new">
+            <input name="url" type="text" maxlength="100" aria-labelledby="submit">
+            <button type="submit" id="submit">Short URL</button>
+          </form>  
+        </div>
+        <div>
+          <p>
+            Enter an URL into the shortner to get a shortened version of the url at: <code>[baseurl]/api/shorten/[short_url]</code> 
+          </p>
+
+        </div>
+        <div class="example">
+          <h3>Response example:</h3>
+          <p>
+           <code>{"original_url":"http://www.example.com","short_url":"cf1"}</code>
+          </p>
+        </div>
+      </section>
+      <section id="test">
+        <h2>
+          Test redirect:
+        </h2>
+        <div class="shorten-form">
+          <h4>
+          Test URL
+          </h4>
+          <form method="GET" action="api/shorturl/" onsubmit="handleGet()" id="get_form">
+            <span>[baseurl]/api/shorturl/</span><input name="url" type="text" maxlength="3" class="input-short">
+            <button type="submit" id="submit">Visit URL</button>
+          </form>  
+        </div>
+        <div>
+          <p>
+            enter a short_url response into the test field.
+          </p>
+          <h3>
+            Response example:
+          </h3>
+          <p>
+            Entering <code>410</code> into the "Test URL" input field will redirect you to <code>www.freecodecamp.org</code>
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

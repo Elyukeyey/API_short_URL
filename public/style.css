@@ -1,0 +1,41 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+h1 {
+  color: cornflowerblue;
+}
+input {
+  padding: 5px;
+}
+button {
+  background-color: cornflowerblue;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+  padding: 5px;
+}
+button:hover {
+  background-color: dodgerblue;
+  border: 0px;
+}
+#test {
+  margin-top: 100px
+}
+.input-short {
+width: 30px;
+}
+.shorten-form {
+  width: 90%;
+  max-width: 315px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  /*padding: 20px 0px;*/
+  border-radius: 10px;
+  text-align: center;
+}
+.shorten-form form {
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
+}
